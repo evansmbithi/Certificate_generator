@@ -13,7 +13,7 @@
 <body>
 
         
-        <div class="container">
+    <div class="container">
         
         <div id="dvMain" class="header">
             
@@ -21,11 +21,12 @@
             <input type="button" value="Rows" id="btnCreate" class="btn btn-warning">
             <input type="button" value="Add Row" id="btnAdd" class="btn btn-warning">
             <input type="button" value="Clear" id="btnClear" class="btn btn-warning">
+            <input type="button" value="Generate" id="btnGenerate" class="btn btn-danger" onclick="redirect()">
             
         </div>
         <br>
-        <form action="insert.php" method="post">
-            <div id="AddControl">
+        <form action="" method="post">
+            <div id="AddControl" class="addControl">
 
             </div>
         </form>
@@ -33,6 +34,11 @@
 
     <script src="jquery.js"></script>
     <script src="dynamo.js"></script>
+    <script>
+        function redirect(){
+            window.location.href = "insert.php";
+        }
+    </script>
         
     
 </body>

@@ -7,15 +7,15 @@ var count;  //gets the no. of rows indicated by user
 
 function load (){
     
-    var submit = "<input type='submit' value='Generate Certificates' class='btn btn-outline-danger'>";
-    $("#AddControl").append(submit);
+    //var submit = "<input type='submit' value='Generate Certificates' class='btn btn-outline-danger'>";
+    //$("#AddControl").append(submit);
 
     $("#txtNoOfRec").focus();
 
     $("#btnCreate").click(function () {
         $("#AddControl").empty();   //restricts the number of rows to the indicated value
         var NoOfRec = $("#txtNoOfRec").val();
-        $("#AddControl").append(submit); 
+        //$("#AddControl").append(submit); 
 
         if (NoOfRec > 0){
             createControl(NoOfRec);

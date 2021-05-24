@@ -6,7 +6,16 @@
 
 .header {
   display: flex;
-  padding: 2px;
+  flex-direction: row;
+  padding: 10px;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  justify-content: center;
+}
+
+form {
+  margin-top: 2em;
 }
 
 .header input[type="button"] {

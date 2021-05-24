@@ -41,6 +41,10 @@ link to line-awesome CDN
   padding-right: 1rem;
 }
 
+.sidebar-brand span img {
+  width: 1.5em;
+}
+
 .sidebar-menu {
   margin-top: 1rem;
 }
