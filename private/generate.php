@@ -11,6 +11,7 @@ While($row=mysqli_fetch_array($fetch))
 $img = imagecreatefromjpeg("bgcert.jpg");
 $color = imagecolorallocate($img, 19, 21, 22);   //OBJ, RGB
 $font = "C:\Windows\Fonts\Arial.ttf";
+$bold = "C:\Windows\Fonts\Arialbd.ttf";
 
 //Labels
 $confirm = "This Certificate confirms that the vehicle has been fitted with ";
@@ -30,7 +31,7 @@ imagettftext(
     0,      //angle
     70, 230,  //X, Y cordinates
     $color, //font color
-    $font,  //font to use
+    $bold,  //font to use
     $registrationlbl
 );
 $modellbl = "MODEL       : ";
@@ -40,7 +41,7 @@ imagettftext(
     0,      //angle
     70, 260,  //X, Y cordinates
     $color, //font color
-    $font,  //font to use
+    $bold,  //font to use
     $modellbl
 );
 $datelbl = "DATE       : ";
@@ -50,7 +51,7 @@ imagettftext(
     0,      //angle
     70, 290,  //X, Y cordinates
     $color, //font color
-    $font,  //font to use
+    $bold,  //font to use
     $datelbl
 );
 $namelbl = "NAME       : ";
@@ -60,7 +61,7 @@ imagettftext(
     0,      //angle
     70, 320,  //X, Y cordinates
     $color, //font color
-    $font,  //font to use
+    $bold,  //font to use
     $namelbl
 );
 $colorlbl = "COLOUR       : ";
@@ -70,7 +71,7 @@ imagettftext(
     0,      //angle
     70, 350,  //X, Y cordinates
     $color, //font color
-    $font,  //font to use
+    $bold,  //font to use
     $colorlbl
 );
 $telephonelbl = "TELEPHONE       : ";
@@ -80,7 +81,7 @@ imagettftext(
     0,      //angle
     70, 380,  //X, Y cordinates
     $color, //font color
-    $font,  //font to use
+    $bold,  //font to use
     $telephonelbl
 );
 $validitylbl = "The validity of tis certificate is for the duration of        ";
@@ -103,7 +104,7 @@ imagettftext(
     0,      //angle
     200, 230,  //X, Y cordinates
     $color, //font color
-    $font,  //font to use
+    $bold,  //font to use
 //  $txt,   //text to write
     $reg
 );
@@ -115,7 +116,7 @@ imagettftext(
     0,      //angle
     200, 260,  //X, Y cordinates
     $color, //font color
-    $font,  //font to use
+    $bold,  //font to use
 //  $txt,   //text to write
     $model
 );
@@ -127,7 +128,7 @@ imagettftext(
     0,      //angle
     200, 290,  //X, Y cordinates
     $color, //font color
-    $font,  //font to use
+    $bold,  //font to use
     $date
 );
 
@@ -138,7 +139,7 @@ imagettftext(
     0,      //angle
     200, 320,  //X, Y cordinates
     $color, //font color
-    $font,  //font to use
+    $bold,  //font to use
 //  $txt,   //text to write
     $name
 );
@@ -150,7 +151,7 @@ imagettftext(
     0,      //angle
     200, 350,  //X, Y cordinates
     $color, //font color
-    $font,  //font to use
+    $bold,  //font to use
 //  $txt,   //text to write
     $col
 );
@@ -162,7 +163,7 @@ imagettftext(
     0,      //angle
     200, 380,  //X, Y cordinates
     $color, //font color
-    $font,  //font to use
+    $bold,  //font to use
 //  $txt,   //text to write
     $tel
 );

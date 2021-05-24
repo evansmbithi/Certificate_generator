@@ -7,7 +7,7 @@ var count;  //gets the no. of rows indicated by user
 
 function load (){
     
-    var submit = "<input type='submit' value='Generate Certificates' class='btn btn-primary'>";
+    var submit = "<input type='submit' value='Generate Certificates' class='btn btn-outline-danger'>";
     $("#AddControl").append(submit);
 
     $("#txtNoOfRec").focus();
@@ -33,6 +33,7 @@ function load (){
 
     $("#btnClear").click(function () {
         $("#AddControl").empty();
+        $("#AddControl").append(submit);
         createControl(1); 
     });
 
