@@ -14,11 +14,11 @@
   justify-content: center;
 }
 
-form {
+.addControl {
   margin-top: 2em;
 }
 
-.header input[type="button"] {
+.header input {
   margin-left: 2px;
   border-radius: 0;
 }

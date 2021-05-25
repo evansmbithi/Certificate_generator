@@ -22,6 +22,7 @@
     <div class="success">
         <span class="las la-check">
             <h3>Download Successful!</h3>
+            <a href="frame.html" class="btn btn-outline-danger btn-lg">Back</a>
         </span>
               
     </div> 

@@ -33,7 +33,7 @@ function load (){
 
     $("#btnClear").click(function () {
         $("#AddControl").empty();
-        $("#AddControl").append(submit);
+        //$("#AddControl").append(submit);
         createControl(1); 
     });
 

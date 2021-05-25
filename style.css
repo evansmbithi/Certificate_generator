@@ -10,6 +10,10 @@ link to line-awesome CDN
   --text-grey: #8390a2;
 }
 
+body {
+  overflow-y: hidden;
+}
+
 * {
   padding: 0;
   margin: 0;
