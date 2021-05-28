@@ -274,7 +274,7 @@ imagepng($imgResized, $pat);
 
 //BAR CODE
 // Text to be converted
-$code = "P  N   /   20  -   ".date("y")."   /   ".rand(6,9)."   ".rand(0,9)."   ".rand(0,9)."   ".rand(0,9);
+$code = "PN/20-".date("y")."/".rand(6,9)."".rand(0,9)."".rand(0,9)."".rand(0,9);
 
 // Text printed above the barcode
 //$text = 'BarCode128';
@@ -288,7 +288,7 @@ $font = "C:\Windows\Fonts\Arialbd.ttf";
 $fontSize = 24;
 
 // height of the barcode in px
-$height = 120;
+$height = 128;
 
 // create an Object of BarCode128 Class
 $barcode = new AMWD\BarCode128($code, $height);

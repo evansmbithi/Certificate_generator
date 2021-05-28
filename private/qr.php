@@ -20,7 +20,7 @@ While($row=mysqli_fetch_array($fetch))
     $image1 = imagecreatefromstring(file_get_contents($image1));
     $image2 = imagecreatefromstring(file_get_contents($image2));
 
-    imagecopymerge($image1, $image2, 150, 600, 0, 0, $width, $height, 100);
+    imagecopymerge($image1, $image2, 150, 550, 0, 0, $width, $height, 100);
     header('Content-Type: image/png');
     //imagepng($image1);
     imagepng($image1, "qrsave/$ren.png");

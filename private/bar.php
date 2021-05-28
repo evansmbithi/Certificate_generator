@@ -18,13 +18,13 @@ While($row=mysqli_fetch_array($fetch))
     $image1 = imagecreatefromstring(file_get_contents($image1));
     $image2 = imagecreatefromstring(file_get_contents($image2));
 
-    imagecopymerge($image1, $image2, 1730, 645, 0, 0, $width, $height, 100);
+    imagecopymerge($image1, $image2, 1730, 635, 0, 0, $width, $height, 100);
     header('Content-Type: image/png');
-    //imagepng($image1);
-    imagepng($image1, "result/$ren.png");
+    imagepng($image1);
+    //imagepng($image1, "result/$ren.png");
     imagedestroy($image1);
     imagedestroy($image2);
     
 }
 
-header('location: download.php');
+//header('location: download.php');
