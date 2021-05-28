@@ -7,18 +7,61 @@ class Del{
     //$query= 
     mysqli_query($con,$sql);
 
-    //if($query){
-    $delay = time() + 60;
-    echo $delay;
+   
 
         //delete files
-        $path = "files";
-        $files = glob($path.'/*');
+        $path1 = "files";
+        $files = glob($path1.'/*');
 
         foreach($files as $file){ 
             //echo "deleted";
             unlink($file);
             
-        }        
+        }   
+        
+        $path2 = "barcode";
+        $barcode = glob($path2.'/*');
+
+        foreach($barcode as $barcode){ 
+            //echo "deleted";
+            unlink($barcode);
+            
+        }
+        
+        $path3 = "barsize";
+        $barsize = glob($path3.'/*');
+
+        foreach($barsize as $barsize){ 
+            //echo "deleted";
+            unlink($barsize);
+            
+        } 
+
+        $path4 = "qr";
+        $qr = glob($path4.'/*');
+
+        foreach($qr as $qr){ 
+            //echo "deleted";
+            unlink($qr);
+            
+        } 
+
+        $path5 = "qrsave";
+        $qrsave = glob($path5.'/*');
+
+        foreach($qrsave as $qrsave){ 
+            //echo "deleted";
+            unlink($qrsave);
+            
+        } 
+
+        $path6 = "result";
+        $result = glob($path6.'/*');
+
+        foreach($result as $result){ 
+            //echo "deleted";
+            unlink($result);
+            
+        } 
     }
 }

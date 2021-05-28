@@ -24,6 +24,14 @@
             }
         }
     */
+
+    /*
+$sql="SELECT count(sname) AS count FROM certificates";
+$fetch = mysqli_query($con,$sql);
+$row = mysqli_fetch_assoc($fetch);
+$count = $row['count'];
+//echo $count;
+*/
         ?>
         
     </main>

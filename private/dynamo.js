@@ -37,7 +37,9 @@ function load (){
         createControl(1); 
     });
 
-     
+    $("#btnGenerate").click(function () {
+        window.location.replace("certificate.html");
+    });
     
 }
 function createControl(NoOfRec) {
@@ -46,24 +48,34 @@ function createControl(NoOfRec) {
     tbl = "<table class='table table-bordered table-hover'>"+ 
             "<tr>"+
                 "<th>No.</th>"+
-                "<th>Name</th>"+
+                "<th>Certficate No.</th>"+
+                "<th>Device</th>"+
+                "<th>Registration</th>"+                
                 "<th>Model</th>"+
-                "<th>Registration</th>"+
+                "<th>Name</th>"+
                 "<th>Colour</th>"+
                 "<th>Telephone</th>"+
+                "<th>Loan Duration Years</th>"+
+                "<th>Loan Duration Months</th>"+
+                "<th>From</th>"+
+                "<th>To</th>"+
             "</tr>";
 
     for (i=1; i<=NoOfRec; i++){
         count = i;
         tbl += "<tr>"+ 
-                    "<td>" + i + "</td>" +  
-
+                    "<td>" + i + "</td>" +
+                    
                     "<td>"+
-                        "<input type='text' id='txtName' name='cname[]' placeholder='eg. EVANS MBITHI' autofocus>"+
+                        "<input type='text' id='certNo' name='certNo[]' placeholder='eg. 47111/05/2021' autofocus>"+
                     "</td>"+
 
                     "<td>"+
-                        "<input type='text' id='txtModel' name='model[]' placeholder='ISUZU NPR'>"+
+                        "<select id='device' name='device[]'>"+
+                            "<option value='GPS/GSM/GPRS Tracking System'>GPS/GSM/GPRS Tracking System</option>"+
+                            "<option value='Anti-Theft Alarm Device'>Anti-Theft Alarm Device</option>"+
+                            
+                        "</select>"+
                     "</td>"+
 
                     "<td>"+
@@ -73,6 +85,14 @@ function createControl(NoOfRec) {
                     */
                         "<input type='text' id='txtReg' name='reg[]' placeholder='KCY 345N'>"+
                     "</td>"+
+
+                    "<td>"+
+                        "<input type='text' id='txtModel' name='model[]' placeholder='ISUZU NPR'>"+
+                    "</td>"+
+
+                    "<td>"+
+                        "<input type='text' id='txtName' name='cname[]' placeholder='eg. EVANS MBITHI'>"+
+                    "</td>"+            
 
                     "<td>"+
                         "<input type='text' id='txtColor' name='color[]' placeholder='BLACK'>"+
@@ -89,6 +109,22 @@ function createControl(NoOfRec) {
                         "</select>"+
                     */
                         "<input type='text' id='txtTel' name='tel[]' placeholder='07XX XXX XXX'>"+
+                    "</td>"+
+
+                    "<td>"+
+                        "<input type='text' id='years' name='years[]' placeholder='4'>"+
+                    "</td>"+
+
+                    "<td>"+
+                        "<input type='text' id='months' name='months[]' placeholder='06'>"+
+                    "</td>"+
+
+                    "<td>"+
+                        "<input type='text' id='periodFrom' name='periodFrom[]' placeholder='01/01/2021'>"+
+                    "</td>"+
+
+                    "<td>"+
+                        "<input type='text' id='periodTo' name='periodTo[]' placeholder='01/01/2025'>"+
                     "</td>"+
              "</tr>";
     }

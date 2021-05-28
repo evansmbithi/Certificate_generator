@@ -1,6 +1,25 @@
 <?php
-require('vendor/autoload.php');
+//require('vendor/autoload.php');
+require '../includes/fpdf/fpdf.php';
 
+$pdf = new FPDF();
+
+ //display images dynamically
+ $glob = glob("result/*.png");
+
+ foreach ($glob as $filename){
+     //echo $filename;
+    $pdf->AddPage();
+    $pdf->Image($filename, 0,0,210,297);
+    
+ };
+
+ $pdf->output();
+
+
+
+
+/*
 class Download{
     
     //convert web page to pdf
@@ -9,10 +28,10 @@ class Download{
         $mpdf = new \Mpdf\Mpdf();
 
         //display images dynamically
-        $glob = glob("files/*.jpg");
+        $glob = glob("result/*.png");
 
         foreach ($glob as $filename){
-            $certs= "<img src='$filename' style='page-break-after: always'; width: 100% />";
+            $certs= "<img src='$filename' style='page-break-after: always'; margin: 0; padding: 0; width: 100% />";
             //echo $certs . "<br>";
             $mpdf->WriteHTML($certs);
             
@@ -32,5 +51,8 @@ class Download{
 
 $download = new Download();
 $download->print();
+
+*/
+
 
 

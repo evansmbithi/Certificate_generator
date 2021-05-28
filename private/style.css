@@ -18,7 +18,8 @@
   margin-top: 2em;
 }
 
-.header input {
+.header input[type="button"],
+.header input[type="submit"] {
   margin-left: 2px;
   border-radius: 0;
 }
