@@ -20,11 +20,11 @@ While($row=mysqli_fetch_array($fetch))
 
     imagecopymerge($image1, $image2, 1730, 635, 0, 0, $width, $height, 100);
     header('Content-Type: image/png');
-    imagepng($image1);
-    //imagepng($image1, "result/$ren.png");
+    //imagepng($image1);
+    imagepng($image1, "result/$ren.png");
     imagedestroy($image1);
     imagedestroy($image2);
     
 }
 
-//header('location: download.php');
+header('location: download.php');
