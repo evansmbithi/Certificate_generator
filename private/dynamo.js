@@ -36,10 +36,6 @@ function load (){
         //$("#AddControl").append(submit);
         createControl(1); 
     });
-
-    $("#btnGenerate").click(function () {
-        window.location.replace("certificate.html");
-    });
     
 }
 function createControl(NoOfRec) {

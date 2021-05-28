@@ -7,9 +7,16 @@
     <title>Unique Tracking Ltd.</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-    <input type="checkbox" name="" id="nav-toggle">
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
+    <div>
+        <input type="checkbox" name="" id="nav-toggle">
     <div class="sidebar">
         <div class="sidebar-brand">
             <h2><span><img src="white_logo.png" alt=""></span><span>Unique Tracking</span></h2>         
@@ -21,7 +28,7 @@
                     <a href="" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href=""><span><img src="https://img.icons8.com/ios-glyphs/30/ffffff/2x6-vehicle.png"/></span><span>Chassis only</span></a>
+                    <a href=""><span><img src="https://img.icons8.com/ios-glyphs/30/ffffff/2x6-vehicle.png"/></span><span>Without chassis</span></a>
                 </li>
                 <li>
                     <a href=""><span class="las la-radiation"></span><span>Chassis with engine</span></a>
@@ -59,11 +66,13 @@
         </header>
 
         <main class="dash">
+           
+
             <div class="cards">
                 <div class="card-single">
                     <div>
                         <h1>54</h1>
-                        <span>Chassis only</span>
+                        <span>Without chasis</span>
                     </div>
                     <div>
                         <span><img src="https://img.icons8.com/ios-glyphs/30/ff5e00/2x6-vehicle.png"/></span>
@@ -102,5 +111,14 @@
             </div>
         </main>
     </div>
+</div>
+
+<script src="jquery.js"></script>
+<script>
+    setTimeout(function(){
+        $('.loader_bg').fadeToggle();
+    }, 3000);
+</script>
+    
 </body>
 </html>

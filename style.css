@@ -178,13 +178,14 @@ header label span {
 
 .dash {
   margin-top: 85px;
-  padding: 2rem 1.5rem;
+
   background: #f1f5f9;
   min-height: calc(100vh - 90px);
   min-width: fit-content;
 }
 
 .cards {
+  padding: 2rem 1.5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;

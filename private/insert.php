@@ -14,5 +14,5 @@ for($i=0; $i<$count; $i++){
     $con->query($sql);
 }
 
-header('location: certificate.html');
+header('location: wait.html');
 ?>

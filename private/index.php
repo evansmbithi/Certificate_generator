@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">  
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="..\style.css">
+    <link rel="stylesheet" href="../animate.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
     <input type="checkbox" name="" id="nav-toggle">
     <div class="sidebar">
         <div class="sidebar-brand">
@@ -22,7 +28,7 @@
                     <a href="..\index.html"><span class="las la-igloo"></span><span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href=""><span><img src="https://img.icons8.com/ios-glyphs/30/ffffff/2x6-vehicle.png"/></span><span>Chassis only</span></a>
+                    <a href=""><span><img src="https://img.icons8.com/ios-glyphs/30/ffffff/2x6-vehicle.png"/></span><span>Without chasis</span></a>
                 </li>
                 <li>
                     <a href=""><span class="las la-radiation"></span><span>Chassis with engine</span></a>
@@ -86,6 +92,13 @@
 -->
         </main>
     </div>
+
+    <script src="jquery.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 3000);
+    </script> 
 </body>
 </html>
 

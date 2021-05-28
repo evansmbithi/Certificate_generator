@@ -39,7 +39,7 @@ table th {
   flex-direction: column;
   align-items: center; /*aligns items vertically at the center*/
   justify-content: center;
-  font-size: 10rem;
+  font-size: 8rem;
 }
 
 iframe {
