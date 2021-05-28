@@ -28,12 +28,12 @@ class Del{
             
         }
         
-        $path3 = "barsize";
-        $barsize = glob($path3.'/*');
+        $path3 = "qrsize";
+        $qrsize = glob($path3.'/*');
 
-        foreach($barsize as $barsize){ 
+        foreach($qrsize as $qrsize){ 
             //echo "deleted";
-            unlink($barsize);
+            unlink($qrsize);
             
         } 
 
