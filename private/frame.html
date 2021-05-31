@@ -16,14 +16,21 @@
 
         <form action="insert.php" method="post">
             <div id="dvMain" class="header">
+                <div>
+                    <label for="txtNoOfRec">Specify number of rows:</label><br>
+                    <input type="text" value = "1" id="txtNoOfRec" placeholder="Enter no. of rows">
+                    <input type="button" value="Rows" id="btnCreate" class="btn btn-outline-secondary">
+                    <input type="button" value="Add Row" id="btnAdd" class="btn btn-outline-secondary">
+                    <input type="button" value="Clear" id="btnClear" class="btn btn-outline-secondary">
+                </div>                
                 
-                <input type="text" value = "1" id="txtNoOfRec" placeholder="Enter no. of rows">
-                <input type="button" value="Rows" id="btnCreate" class="btn btn-outline-secondary">
-                <input type="button" value="Add Row" id="btnAdd" class="btn btn-outline-secondary">
-                <input type="button" value="Clear" id="btnClear" class="btn btn-outline-secondary">
-                <input type="submit" value="Generate" class="btn btn-danger">
+                <div>
+                    <input type="button" value="Upload file" class="btn btn-primary">
+                    <input type="submit" value="Generate" class="btn btn-success">
+                </div>
                 
             </div>
+           
             <br>
             
             <div id="AddControl" class="addControl">

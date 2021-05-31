@@ -248,6 +248,18 @@ imagettftext(
     $to
 );
 
+/*
+imagettftext(
+    $img,   //image object
+    32.5,     //font size
+    0,      //angle
+    1600, 2203,  //X, Y cordinates
+    $color, //font color
+    $bold,  //font to use
+//  $txt,   //text to write
+    $si
+);
+*/
 
 //output bulk files 
 header("Content-type: image/png");
