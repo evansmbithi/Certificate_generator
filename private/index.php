@@ -28,13 +28,13 @@
                     <a href="..\index.html"><span class="las la-igloo"></span><span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href=""><span><img src="https://img.icons8.com/ios-glyphs/30/ffffff/2x6-vehicle.png"/></span><span>Without chasis</span></a>
+                    <a href="..\without_chasis\index.php"><span><img src="https://img.icons8.com/ios-glyphs/30/ffffff/2x6-vehicle.png"/></span><span>Without chasis</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-radiation"></span><span>Chassis with engine</span></a>
+                    <a href="..\with_chasis\index.php"><span class="las la-radiation"></span><span>Chassis with engine</span></a>
                 </li>
                 <li>
-                    <a href="" class="active"><span class="las la-car"></span><span>Private</span></a>
+                    <a href="#" class="active"><span class="las la-car"></span><span>Private</span></a>
                 </li>                
             </ul>
         </div>

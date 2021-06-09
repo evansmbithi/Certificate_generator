@@ -1,0 +1,64 @@
+.container {
+  margin-left: 0;
+  padding-left: 0;
+  min-width: 100vw;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header div {
+  float: right;
+}
+
+.addControl {
+  margin-top: 4em;
+}
+
+.header input[type="text"] {
+  width: 5em;
+}
+
+.header input[type="button"],
+.header input[type="submit"] {
+  margin-left: 2px;
+  border-radius: 0;
+}
+
+table th {
+  background-color: orange;
+}
+
+.search {
+  float: right;
+}
+
+.success span {
+  color: #ff5e00;
+  height: 50vh;
+  display: flex; /*takes all the width of the page*/
+  flex-direction: column;
+  align-items: center; /*aligns items vertically at the center*/
+  justify-content: center;
+  font-size: 8rem;
+}
+
+iframe {
+  min-height: 85vh;
+  width: 100%;
+}
+
+.private {
+  margin-top: 80px;
+  padding: 0.5rem 0.3rem;
+  background: transparent;
+  min-height: calc(100vh - 90px);
+  min-width: fit-content;
+}

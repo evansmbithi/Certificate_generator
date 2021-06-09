@@ -1,0 +1,38 @@
+ <link rel="stylesheet" href="print.css">
+<link rel="stylesheet" href="..\bootstrap\css\bootstrap.css">
+
+ <!--
+    <header>
+        <button onclick="window.print();" class="btn btn-primary" id="print-btn">Print Certs</button>
+        <div class="search">
+    <!--SEARCH BUTTON--
+            <form action="" method="post">
+                <input type="text" name="nam" placeholder="Search Certificate..." id="">
+                <input type="submit" name="search" value="SEARCH">
+            </form>
+        </div>
+    </header>
+    
+    <main>
+    <?php
+    /*
+        if(isset($_POST['search'])){
+            $nam = $_POST['nam'];
+            $search = glob("files/$nam.jpg");
+            foreach($search as $ims){
+                echo "<img src='$ims'>";
+            }
+        }
+    */
+
+    /*
+$sql="SELECT count(sname) AS count FROM certificates";
+$fetch = mysqli_query($con,$sql);
+$row = mysqli_fetch_assoc($fetch);
+$count = $row['count'];
+//echo $count;
+*/
+        ?>
+        
+    </main>
+    -->

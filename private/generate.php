@@ -165,6 +165,8 @@ imagettftext(
 );
 
 $name = $row['cname'];
+//apply word wrap on the name
+$wrap_name = wordwrap($name, 50, "\n");
 imagettftext(
     $img,   //image object
     32.5,     //font size
@@ -173,7 +175,7 @@ imagettftext(
     $color, //font color
     $bold,  //font to use
 //  $txt,   //text to write
-    $name
+    $wrap_name
 );
 
 $col = $row['color'];
@@ -200,8 +202,23 @@ imagettftext(
     $tel
 );
 
-$years = $row['years']." ". "Years";
-imagettftext(
+$db_years = $row['years'];
+
+if($db_years == 1){
+    $year = $db_years." ". "Year";
+    imagettftext(
+    $img,   //image object
+    32.5,     //font size
+    0,      //angle
+    1365, 2063,  //X, Y cordinates
+    $color, //font color
+    $bold,  //font to use
+//  $txt,   //text to write
+    $year
+);
+}elseif ($db_years >= 2) {
+    $years = $db_years." ". "Years";
+    imagettftext(
     $img,   //image object
     32.5,     //font size
     0,      //angle
@@ -210,19 +227,73 @@ imagettftext(
     $bold,  //font to use
 //  $txt,   //text to write
     $years
-);
+    );
 
-$months = $row['months']." ". "Months";
-imagettftext(
+}else{
+    $null_years = "";
+    imagettftext(
+    $img,   //image object
+    32.5,     //font size
+    0,      //angle
+    1365, 2063,  //X, Y cordinates
+    $color, //font color
+    $bold,  //font to use
+    //  $txt,   //text to write
+    $null_years
+    );
+}
+
+
+$db_months = $row['months'];
+
+if($db_months == 1){
+    $month = $db_months." ". "Month";
+    imagettftext(
+        $img,   //image object
+        32.5,     //font size
+        0,      //angle
+        1555, 2063,  //X, Y cordinates
+        $color, //font color
+        $bold,  //font to use
+    //  $txt,   //text to write
+        $month
+    );
+}elseif($db_months >= 2){
+    $months = $db_months." ". "Months";
+    imagettftext(
+        $img,   //image object
+        32.5,     //font size
+        0,      //angle
+        1555, 2063,  //X, Y cordinates
+        $color, //font color
+        $bold,  //font to use
+    //  $txt,   //text to write
+        $months
+    );
+}else{
+    $null_month = "";
+    imagettftext(
     $img,   //image object
     32.5,     //font size
     0,      //angle
     1555, 2063,  //X, Y cordinates
     $color, //font color
     $bold,  //font to use
-//  $txt,   //text to write
-    $months
-);
+    //  $txt,   //text to write
+    $null_month
+    );
+}
+
+imagettftext(
+    $img,   //image object
+    32.5,     //font size
+    0,      //angle
+    1770, 2063,  //X, Y cordinates
+    $color, //font color
+    $bold,  //font to use
+    //  $txt,   //text to write
+    "as from"
+    );
 
 $from = $row['periodFrom'];
 imagettftext(
@@ -248,6 +319,19 @@ imagettftext(
     $to
 );
 
+$name = $row['cname'];
+$no_space=str_replace(" ", "", $name);
+$repeat = str_repeat($no_space, 10);
+imagettftext(
+    $img,   //image object
+    10,     //font size
+    0,      //angle
+    1405, 2783,  //X, Y cordinates
+    $color, //font color
+    $font,  //font to use
+//  $txt,   //text to write
+    $repeat
+);
 /*
 imagettftext(
     $img,   //image object
