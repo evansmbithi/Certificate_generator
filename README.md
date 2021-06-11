@@ -1,4 +1,5 @@
 # certificate_generator
+![alogo](https://user-images.githubusercontent.com/14232865/121625929-1e1ef480-ca7d-11eb-9c79-78a8bae4c6bb.png)
 ![image](https://user-images.githubusercontent.com/14232865/119361464-5f10be00-bcb4-11eb-994e-1813fc0d6779.png)
 ![image](https://user-images.githubusercontent.com/14232865/119361532-7354bb00-bcb4-11eb-81ae-12a6baf3069a.png)
 ![image](https://user-images.githubusercontent.com/14232865/119361669-97b09780-bcb4-11eb-82a2-c435fa0cf31b.png)
