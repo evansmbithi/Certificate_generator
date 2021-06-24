@@ -1,11 +1,19 @@
 <?php
+
 class Del{
+
+    private $con;
+
+    public function __construct($con){
+        $this->con=$con;
+    }
+
     public function delete(){
     //delete records
-    $con = mysqli_connect("localhost","root","","cert_gen");
+    //$con = mysqli_connect("localhost","root","","cert_gen");
     $sql = "truncate table certificates";
     //$query= 
-    mysqli_query($con,$sql);
+    mysqli_query($this->con,$sql);
 
    
 

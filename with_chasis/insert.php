@@ -1,11 +1,12 @@
 <?php
+include '../includes/database.php';
 require_once "delete.php";
 
 //delete initial files
-$delete = new Del();
+$delete = new Del($con);
 $delete->delete();
 
-$con = mysqli_connect("localhost", "root", "", "cert_gen");
+//$con = mysqli_connect("localhost", "root", "", "cert_gen");
 
 $count = count($_POST['cname']);
 

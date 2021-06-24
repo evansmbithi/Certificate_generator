@@ -1,5 +1,5 @@
 <?php
-include 'includes/database.php';
+include '../includes/database.php';
 
 $uploadfile=$_FILES['uploadfile']['tmp_name']; //fetches the upload file
 
@@ -8,7 +8,7 @@ require_once 'includes/PHPExcel/Classes/PHPExcel/IOFactory.php';
 require_once "delete.php";
 
 //delete initial files
-$delete = new Del();
+$delete = new Del($con);
 $delete->delete();
 
 $objExcel=PHPExcel_IOFactory::load($uploadfile);

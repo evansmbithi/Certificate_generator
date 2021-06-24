@@ -1,10 +1,12 @@
 <?php
+include '../includes/database.php';
 //include ('includes/barcode128.php');
+
 require_once __DIR__.'/src/Barcode128.class.php';
 require_once '../phpqrcode/qrlib.php';
 
 //Database connection
-$con = mysqli_connect('localhost','root','','cert_gen');
+//$con = mysqli_connect('localhost','root','','cert_gen');
 
 $query = "select * from certificates";
 $fetch = mysqli_query($con,$query);
