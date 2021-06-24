@@ -2,7 +2,7 @@
 include '../includes/database.php';
 //include ('includes/barcode128.php');
 
-require_once __DIR__.'/src/Barcode128.class.php';
+require_once '../BarCode128/src/Barcode128.class.php';
 require_once '../phpqrcode/qrlib.php';
 
 //Database connection

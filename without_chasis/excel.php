@@ -3,8 +3,8 @@ include '../includes/database.php';
 
 $uploadfile=$_FILES['uploadfile']['tmp_name']; //fetches the upload file
 
-require 'includes/PHPExcel/Classes/PHPExcel.php';
-require_once 'includes/PHPExcel/Classes/PHPExcel/IOFactory.php';
+require '../PHPExcel/Classes/PHPExcel.php';
+require_once '../PHPExcel/Classes/PHPExcel/IOFactory.php';
 require_once "delete.php";
 
 //delete initial files
