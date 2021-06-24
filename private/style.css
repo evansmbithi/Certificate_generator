@@ -26,6 +26,7 @@
   width: 5em;
 }
 
+.header a,
 .header input[type="button"],
 .header input[type="submit"] {
   margin-left: 2px;

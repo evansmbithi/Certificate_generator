@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unique Tracking Ltd.</title>
+    <link rel="icon" href="../alogo.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">  
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="..\style.css">
@@ -28,7 +29,7 @@
                     <a href="..\index.html"><span class="las la-igloo"></span><span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href="#" class="active"><span><img src="https://img.icons8.com/ios-glyphs/30/ffffff/2x6-vehicle.png"/></span><span>Without chasis</span></a>
+                    <a href="index.php" class="active"><span><img src="https://img.icons8.com/ios-glyphs/30/ffffff/2x6-vehicle.png"/></span><span>Without chasis</span></a>
                 </li>
                 <li>
                     <a href="..\with_chasis\index.php"><span class="las la-radiation"></span><span>Chassis with engine</span></a>

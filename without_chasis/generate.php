@@ -103,8 +103,8 @@ imagettftext(
 */
 
 //fields
-$cert = $row['certNo'];
-$certNo = "Unique". " ". $cert;
+$certNo = $row['certNo'];
+//$certNo = "Unique". " ". $cert;
 imagettftext(
     $img,   //image object
     26,     //font size
@@ -118,6 +118,7 @@ imagettftext(
 
 
 $device = "with". " ". $row['device'];
+//$device =$row['device'];
 imagettftext(
     $img,   //image object
     32.5,     //font size
@@ -153,7 +154,8 @@ imagettftext(
     $model
 );
 //date('F d, Y')
-$date = date('d/m/Y');
+//$date = date('d/m/Y');
+$date = $row['date'];
 imagettftext(
     $img,   //image object
     32.5,     //font size
@@ -202,9 +204,19 @@ imagettftext(
     $tel
 );
 
-
 $db_years = $row['years'];
 
+    imagettftext(
+    $img,   //image object
+    32.5,     //font size
+    0,      //angle
+    1365, 2063,  //X, Y cordinates
+    $color, //font color
+    $bold,  //font to use
+    //  $txt,   //text to write
+    $db_years
+    );
+/*
 if($db_years == 1){
     $year = $db_years." ". "Year";
     imagettftext(
@@ -259,6 +271,17 @@ if($db_months == 1){
     //  $txt,   //text to write
         $month
     );
+
+    imagettftext(
+        $img,   //image object
+        32.5,     //font size
+        0,      //angle
+        1770, 2063,  //X, Y cordinates
+        $color, //font color
+        $font,  //font to use
+        //  $txt,   //text to write
+        "as from"
+        );
 }elseif($db_months >= 2){
     $months = $db_months." ". "Months";
     imagettftext(
@@ -271,6 +294,17 @@ if($db_months == 1){
     //  $txt,   //text to write
         $months
     );
+
+    imagettftext(
+        $img,   //image object
+        32.5,     //font size
+        0,      //angle
+        1770, 2063,  //X, Y cordinates
+        $color, //font color
+        $font,  //font to use
+        //  $txt,   //text to write
+        "as from"
+        );
 }else{
     $null_month = "";
     imagettftext(
@@ -283,20 +317,22 @@ if($db_months == 1){
     //  $txt,   //text to write
     $null_month
     );
+
+    imagettftext(
+        $img,   //image object
+        32.5,     //font size
+        0,      //angle
+        1555, 2063,  //X, Y cordinates
+        $color, //font color
+        $font,  //font to use
+        //  $txt,   //text to write
+        "as from"
+        );
 }
-
-imagettftext(
-    $img,   //image object
-    32.5,     //font size
-    0,      //angle
-    1770, 2063,  //X, Y cordinates
-    $color, //font color
-    $bold,  //font to use
-    //  $txt,   //text to write
-    "as from"
-    );
+*/
 
 
+//Date From to
 $from = $row['periodFrom'];
 imagettftext(
     $img,   //image object
@@ -309,6 +345,7 @@ imagettftext(
     $from
 );
 
+/*
 $to = "to ".$row['periodTo'];
 imagettftext(
     $img,   //image object
@@ -320,6 +357,7 @@ imagettftext(
 //  $txt,   //text to write
     $to
 );
+*/
 
 $name = $row['cname'];
 $no_space=str_replace(" ", "", $name);
@@ -355,7 +393,7 @@ header("Content-type: image/png");
 //imagepng($img, "files/$name.png"); //file names from DB
 
 //change '/' to '-' before saving
-$ren = str_replace('/','-',$cert);
+$ren = str_replace('/','-',$certNo);
 imagepng($img, "files/$ren.png");
 imagedestroy($img); //free up memory
 
@@ -381,7 +419,7 @@ $code = "PN/20-".date("y")."/".rand(6,9)."".rand(0,9)."".rand(0,9)."".rand(0,9);
 // A font file located in the same directory
 // http://openfontlibrary.org/en/font/hans-kendrick
 //$font = __DIR__."/data/HansKendrick-Regular.ttf";
-$font = "C:\Windows\Fonts\Arialbd.ttf";
+$font = "C:\Windows\Fonts\Arial.ttf";
 
 // corresponding fontsize in px
 $fontSize = 24;

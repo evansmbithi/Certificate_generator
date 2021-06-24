@@ -65,3 +65,8 @@ class Del{
         } 
     }
 }
+
+/*
+$delete = new Del();
+$delete->delete();
+*/
