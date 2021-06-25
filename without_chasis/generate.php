@@ -1,9 +1,15 @@
 <?php
 include '../includes/database.php';
+include "../includes/serverdir.php";
 //include ('includes/barcode128.php');
 
 require_once '../BarCode128/src/Barcode128.class.php';
 require_once '../phpqrcode/qrlib.php';
+
+
+$server = str_replace('without_chasis/generate.php','Fonts/',$server);
+// $fontdir = new Font();
+// $getfont = $fontdir->directory();
 
 //Database connection
 //$con = mysqli_connect('localhost','root','','cert_gen');
@@ -15,8 +21,12 @@ While($row=mysqli_fetch_array($fetch))
 //Get image and write text
 $img = imagecreatefrompng("privatetmp.png");
 $color = imagecolorallocate($img, 0, 0, 0);   //OBJ, RGB 19, 21, 22
-$font = "C:\Windows\Fonts\Arial.ttf";
-$bold = "C:\Windows\Fonts\Arialbd.ttf";
+$font = $server.'arial.ttf';
+$bold = $server.'arialbd.ttf';
+// $font = 'C:\xampp\htdocs\MAESTRO\certificate_generator\Fonts\arial.ttf';
+// $bold = 'C:\xampp\htdocs\MAESTRO\certificate_generator\Fonts\arialbd.ttf';
+// $font = "C:\Windows\Fonts\Arial.ttf";
+// $bold = "C:\Windows\Fonts\Arialbd.ttf";
 //$bold = "C:\Windows\Fonts\ariblk.ttf"; 
 
 /*Labels
@@ -421,7 +431,7 @@ $code = "PN/20-".date("y")."/".rand(6,9)."".rand(0,9)."".rand(0,9)."".rand(0,9);
 // A font file located in the same directory
 // http://openfontlibrary.org/en/font/hans-kendrick
 //$font = __DIR__."/data/HansKendrick-Regular.ttf";
-$font = "C:\Windows\Fonts\Arial.ttf";
+$font = $server.'arial.ttf';
 
 // corresponding fontsize in px
 $fontSize = 24;

@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('localhost','root','','cert_gen');
+include '../includes/database.php';
 
 $query = "select * from certificates";
 $fetch = mysqli_query($con,$query);
